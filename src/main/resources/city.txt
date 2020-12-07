@@ -1,0 +1,10 @@
+Boston, New York
+Philadelphia, Newark
+Newark, Boston
+Trenton, Albany
+Los Angeles, Irvine
+Seattle, Los Angeles
+Houston, Boston
+Chicago, San Fransisco
+San Antonio, Chicago
+Dallas, Chicago

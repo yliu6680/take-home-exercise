@@ -6,7 +6,7 @@ This take home exercise is from [David Parkes](dparkes@zigatta.com) at Zigatta.
 
 ## Instructions
 
-1. Navigate to [repo](https://github.com/janephilipps/tic-tac-toe)
+1. Navigate to [repo](https://github.com/yliu6680/take-home-exercise.git)
 2. Clone locally using
    `git clone git@github.com:janephilipps/tic-tac-toe.git`
 3. Install dependencies using `mvn install`

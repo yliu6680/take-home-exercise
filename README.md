@@ -8,11 +8,11 @@ This take home exercise is from [David Parkes](dparkes@zigatta.com) at Zigatta.
 
 1. Navigate to [repo](https://github.com/yliu6680/take-home-exercise.git)
 2. Clone locally using
-   `git clone git@github.com:janephilipps/tic-tac-toe.git`
+   `git clone https://github.com/yliu6680/take-home-exercise.git`
 3. Install dependencies using `mvn install`
 4. Run tests using `mvn test`
 5. Go to the target, and start the application server using `java -jar ***.jar`
-6. Open browser or to other test tools, and navigate to [(http://localhost:8080](http://localhost:8080)
+6. Open browser or to other test tools, and navigate to [http://localhost:8080/connected?origin=Boston&destination=Newark](http://localhost:8080/connected?origin=Boston&destination=Newark)
 7. Or import the maven project into IDE to run in the development environment.
 
 ## Environments

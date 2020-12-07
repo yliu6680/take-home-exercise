@@ -14,16 +14,6 @@ public class CityConnectionController {
     @Autowired
     private CityConnectionService cityConnectionService;
 
-    @GetMapping("/hello")
-    public String hello(){
-
-        System.out.println(cityConnectionService.isConnected("Boston", "Newark"));
-        System.out.println(cityConnectionService.isConnected("Boston", "Philadelphia"));
-        System.out.println(cityConnectionService.isConnected("Boston", "Albany"));
-
-        return "hello";
-    }
-
     @GetMapping("/connected")
     public String isConnected(@PathParam("origin") String origin,
                                @PathParam("destination") String destination){

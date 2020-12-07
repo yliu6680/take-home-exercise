@@ -2,6 +2,8 @@
 
 By [Paul Liu](mailto:paulliu6680@gmail.com)
 
+This take home exercise is from [David Parkes](dparkes@zigatta.com) at Zigatta.
+
 ## Instructions
 
 1. Navigate to [repo](https://github.com/janephilipps/tic-tac-toe)
@@ -81,19 +83,19 @@ Invalid test cases, including invalid input, empty parameter, and null parameter
 
 ![image](https://github.com/yliu6680/imooc-news-config/blob/master/Null_Input.png)
 
-## Anlysis And Implementations
+## Analysis And Implementations
 
 ### Implementation of Interpreting Data To Graph
 
 I utilized the Java IO package to read the city.txt. 
 
-Hashmap and Hashset is usded to store the graph as adjacent list. Hashmap's key will be the heads of all lists, and value will be the adjacent list. Hashset will store the adjacent list for each head. In each line, I will format the string and split it into to cities name, and try to update the adjacent list. Each city name could be head of the adjacent list, so we need to find the list and add another city name in the hashset.
+Hashmap and Hashset is used to store the graph as adjacent list. Hashmap's key will be the heads of all lists, and value will be the adjacent list. Hashset will store the adjacent list for each head. In each line, I will format the string and split it into to cities name, and try to update the adjacent list. Each city name could be head of the adjacent list, so we need to find the list and add another city name in the hashset.
 
 ### Implementation Of The Searching Algorithm
 
-I implemented the algorithm by Breath First Search, it's an algorithm first expand all neighbour nodes of the origin node, and then go deeper of the graph.
+I implemented the algorithm by Breath First Search, it's an algorithm first expand all neighbor nodes of the origin node, and then go deeper of the graph.
 
-The data structure I used for my algorithm is queue, and implemneted by Java LinkedList. I also used hashset to record all visited node, in case there are any loops in the graph. The stops could be describe as follow:
+The data structure I used for my algorithm is queue, and implemented by Java LinkedList. I also used hashset to record all visited node, in case there are any loops in the graph. The stops could be describe as follow:
 
    1. Add the origin city name in the queue.
    2. Poll the queue, and get a city name. 
@@ -109,9 +111,9 @@ The data structure I used for my algorithm is queue, and implemneted by Java Lin
 #### LRU
 I implemented the Least Recently Used cache with LinkedHashMap. The operations for the cache is shown below:
    
-   1. Initilize the LRU cache with a capacity.
+   1. Initialize  the LRU cache with a capacity.
    2. Get item from the HashMap, if it exists, then we need to swap the item with the last node in the LinkedList of the LinkedHashMap.
-   3. Put item in the HashMap, if the capacity has already fulled, then remove the first node in the LinkedList of LinkedHashMap.
+   3. Put item in the HashMap, if the capacity has already full, then remove the first node in the LinkedList of LinkedHashMap.
 
 So each time the recently used item will be updated to the last node in the LinkedList, and will be kept for longer time. The item will be replaced based on the last time it is used by the user. 
 
@@ -125,7 +127,7 @@ The first way is to store both pairs of city in the cache, so we will have "A:B"
 
 I utilized the second way, because it could save space in the cache memory. 
 
-So in the end, if user search the cities A, B in our applcation, and they have connection, then the cache will save ***{ key: "A:B", value: "Yes" }***. If an other user search cities B, A in our application, we will firstly try to get value from cache by ***cache.get("B:A")***, and then try with ***cache.get("A:B")***, and we could get the value. 
+So in the end, if user search the cities A, B in our application, and they have connection, then the cache will save ***{ key: "A:B", value: "Yes" }***. If another user search cities B, A in our application, we will firstly try to get value from cache by ***cache.get("B:A")***, and then try with ***cache.get("A:B")***, and we could get the value. 
 
 ### Analysis Of The Algorithm
 
@@ -140,7 +142,7 @@ However, each time, the application only read the file one time, and then store 
 
 #### Graph Search
 The ***time complexity*** of the BFS is ***O(M)***, because the worst case will search whole graph.
-The ***space complexity*** of the BFS is ***O(M)***, bacause in the worst case, the queue has to store every node of the graph, and the whole graph has M nodes,
+The ***space complexity*** of the BFS is ***O(M)***, because in the worst case, the queue has to store every node of the graph, and the whole graph has M nodes,
 
 #### Cache
 The ***time complexity*** of the BFS is ***O(1)***, because the worst case will search whole graph.
@@ -150,7 +152,7 @@ So with the cache, user could finally get better time complexity, and for each q
 
 ### Parameters validation
 
-Parameter vlidations are added in the controller layer and the service layer, so we could get No Connection response when user's request parameters are not valid.
+Parameter validations are added in the controller layer and the service layer, so we could get No Connection response when user's request parameters are not valid.
 
 ### Tests 
 
